@@ -9,8 +9,6 @@
 </head>
 
 <body>
-
-
     <div class="container-fluid bg-light">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
