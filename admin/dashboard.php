@@ -1,3 +1,9 @@
+<?php
+require('connection/config.php');
+require('auth/secure.php');
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -41,14 +47,30 @@
                             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
+                    <div class="d-flex">
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Account
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <p><a class="dropdown-item" href="auth/logout.php">Logout</a></p>
+                            </div>
+                        </div>
                         <a class="btn btn-primary btn-sm " href="register.php" role="button"> Register</a>
                         <a class="btn btn-primary btn-sm ms-3" href="index.php" role="button"> Login</a>
-                    </form>
+                    </div>
                 </div>
             </div>
         </nav>
     </div>
+
+    <?php
+    if (isset($_GET['success'])) {
+        echo "<div class='alert alert-success'>" . $_GET['success'] . "</div>";
+        header('refresh:2;url=dashboard.php');
+    }
+
+    ?>
     <header class="py-5">
         <div class="container">
             <h3 class="text-danger">This is My Dashboard</h3>

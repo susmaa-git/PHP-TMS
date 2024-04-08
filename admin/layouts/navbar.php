@@ -32,10 +32,18 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex">
+                    <div class="d-flex">
+                    <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Account
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <p><a class="dropdown-item" href="../auth/logout.php">Logout</a></p>
+                            </div>
+                        </div>
                         <a class="btn btn-primary btn-sm " href="../register.php" role="button"> Register</a>
                         <a class="btn btn-primary btn-sm ms-3" href="../index.php" role="button"> Login</a>
-                    </form>
+                    </div>
                 </div>
             </div>
         </nav>

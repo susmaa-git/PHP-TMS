@@ -1,4 +1,13 @@
-<?php  require('../connection/config.php'); ?>
+<?php  
+require('../connection/config.php'); 
+session_start();
+
+if (isset($_SESSION['email'])) {
+
+} else {
+    header('location:../index.php');
+}
+?>
 
 <!doctype html>
 <html lang="en">

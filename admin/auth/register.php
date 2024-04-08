@@ -12,13 +12,13 @@ if(isset($_POST['register'])){
     $select="SELECT * FROM users WHERE email='$email'";
     $result =mysqli_query($conn, $select);
     if($result->num_rows > 0){
-        echo "Email Already Exists";
+        header('location:../register.php?exist=Email is already exist');
     }
     else{
         $insert = "INSERT INTO users (name, phone, email, password) VALUES ('$name', '$phone', '$email', '$password')";
         $result = mysqli_query($conn, $insert);
         if($result){
-            header('location:../users/index.php?msg=Data Inserted Successfully');
+            header('location:../index.php?msg=Data Inserted Successfully');
         }
         else{
             header('location:../register.php?error=Data is not Inserted Successfully');
@@ -26,7 +26,7 @@ if(isset($_POST['register'])){
     }
    }
    else{
-    header('location:../register.php?required=Above Fields are Required');
+    header('location:../register.php?required=Below Fields are Required');
    }
 }
 

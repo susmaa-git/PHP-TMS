@@ -18,16 +18,26 @@
                 <h4>Login Account</h4>
             </div>
                 <div class="card-body">
-                    <form>
+                    <?php
+                      if(isset($_GET['required'])){
+                        echo "<div class='alert alert-danger'>".$_GET['required']."</div>";
+                        header('refresh:2;url=index.php');
+                    }
+                      if(isset($_GET['error'])){
+                        echo "<div class='alert alert-danger'>".$_GET['error']."</div>";
+                        header('refresh:2;url=index.php');
+                    }
+                    ?>
+                    <form action="auth/login.php" method="POST" enctype="multipart/form-data" >
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <input type="password" class="form-control" name="password" id="exampleInputPassword1">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary" name="login">Submit</button>
                         <div class="mb-3 form-check">
                            <span>Create an Account <a href="register.php">Create New Account</a></span>
                         </div>

@@ -30,6 +30,10 @@
                         echo "<div class='alert alert-warning'>".$_GET['required']."</div>";
                         header('refresh:2;url=register.php');
                     }
+                    if(isset($_GET['exist'])){
+                        echo "<div class='alert alert-warning'>".$_GET['exist']."</div>";
+                        header('refresh:2;url=register.php');
+                    }
                     ?>
                     <form action="auth/register.php" method="POST" enctype="multipart/form-data">
                         <div class="mb-3">
