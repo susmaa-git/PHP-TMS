@@ -37,7 +37,7 @@
                             <label for="exampleInputPassword1" class="form-label">Password</label>
                             <input type="password" class="form-control" name="password" id="exampleInputPassword1">
                         </div>
-                        <button type="submit" class="btn btn-primary" name="login">Submit</button>
+                        <button type="submit" class="btn btn-primary btn-sm" name="login">Submit</button>
                         <div class="mb-3 form-check">
                            <span>Create an Account <a href="register.php">Create New Account</a></span>
                         </div>

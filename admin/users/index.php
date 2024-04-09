@@ -3,7 +3,11 @@
 
 <section class="py-5">
   <div class="container">
-    <h4 class="pb-3">Manage Users</h4>
+    <div class="d-flex justify-content-between">
+      <h4 class="pb-3">Manage Users</h4>
+      <p class=""> <a name="" id="" class="btn btn-primary btn-sm" href="create.php" role="button">Create User</a>
+      </p>
+    </div>
 
     <?php
 
@@ -35,9 +39,9 @@
             <td><?php echo $data['phone']; ?></td>
             <td><?php echo $data['email']; ?></td>
             <td>
-              <a class="btn btn-primary btn-sm " href="#" role="button">Edit </a>
-              <a class="btn btn-info btn-sm " href="#" role="button">View </a>
-              <a class="btn btn-danger btn-sm " href="#" role="button">Delete </a>
+              <a class="btn btn-primary btn-sm " href="edit.php?id=<?php echo $data['id']; ?>" role="button">Edit </a>
+              <a class="btn btn-info btn-sm " href="view.php?id=<?php echo $data['id']; ?>" role="button">View </a>
+              <a class="btn btn-danger btn-sm " onclick="return confirm('Do you want to delete this data??');" href="delete.php?id=<?php echo $data['id']; ?>" role="button">Delete </a>
             </td>
           </tr>
         <?php
