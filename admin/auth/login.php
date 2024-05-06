@@ -10,7 +10,7 @@ if (isset($_POST['login'])) {
     if ($email == "" || $password == "") {
         header('location:../index.php?required=All Fields are Required');
     } else {
-
+        // fetch the email and password from users table
         $select = "SELECT *FROM users WHERE email='$email' AND password='$password'";
         $result = mysqli_query($conn, $select);
         // check if the email and password is correct
@@ -18,6 +18,7 @@ if (isset($_POST['login'])) {
 
             // get the user data
             $row = $result->fetch_assoc();
+            // $row = mysqli_fetch_asoc($result);
 
             // set the session
             $_SESSION['id'] = $row['id'];
