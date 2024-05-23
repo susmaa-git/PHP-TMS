@@ -5,7 +5,7 @@
   <div class="container">
     <div class="d-flex justify-content-between">
       <h4 class="pb-3">Manage Users</h4>
-      <p class=""> <a name="" id="" class="btn btn-primary btn-sm" href="create.php" role="button">Create User</a>
+      <p class=""> <a name="" id="" class="btn btn-primary btn-sm" href="create.php" role="button"><i class="fa-solid fa-plus"></i></a>
       </p>
     </div>
 

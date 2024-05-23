@@ -3,8 +3,12 @@
 
 
 <section class="py-5">
-    <div class="container w-50 ">
-        <h4>Add User</h4>
+  <div class="container w-50">
+    <div class="d-flex justify-content-between">
+      <h4 class="pb-3">Add Users</h4>
+      <p class=""> <a name="" id="" class="btn btn-primary btn-sm" href="index.php" role="button">Manage user</a>
+      </p>
+    </div>
 
         <?php
 

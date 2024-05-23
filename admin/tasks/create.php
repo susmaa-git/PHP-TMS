@@ -1,7 +1,20 @@
 <?php require('../layouts/header.php') ;?>
 <?php require('../layouts/navbar.php') ;?>
 
+<section class="py-5">
+  <div class="container">
+    <div class="d-flex justify-content-end">
+      <p class=""> <a name="" id="" class="btn btn-primary btn-sm" href="index.php" role="button">Manage task</a>
+      </p>
+    </div>
+
+
+
+
+
+
 <?php
+
 
 if(isset($_POST['create'])){
     $tasktitle = $_POST['tasktitle'];
@@ -77,10 +90,11 @@ if(isset($_POST['create'])){
                 </div>
                 <button type="submit" class="btn btn-primary" name= "create">Submit</button>
                 <div class="mb-3 form-check">
-                    <span>I have already an account <a href="index.php">Login Now</a></span>
                 </div>
             </form>
         </div>
     </section>
 
+  </div>
+</section>
 <?php require('../layouts/footer.php'); ?>

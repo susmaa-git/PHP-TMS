@@ -13,7 +13,7 @@ if(isset($_POST['create'])){
     $qualification = $_POST['qualification'];
     if($name!= "" && $phone!= "" && $address!= "" && $faculty!= "" && $qualification!= "")
     {
-        $select = "SELECT * FROM teachers WHERE phone = $phone";
+        $select = "SELECT * FROM teachers WHERE name = '$name'";
         $get_select = mysqli_query($conn,$select);
         if($get_select->num_rows>0){?>
             <div class="alert alert-warning alert-dismissible fade show" role="alert">

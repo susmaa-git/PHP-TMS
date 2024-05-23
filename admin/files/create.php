@@ -35,22 +35,27 @@
                             $result = mysqli_query($conn, $insert);
                             if ($result) {
                                 echo "file is submitted";
-                                // header('Refresh:2; URL=index.php');
+                                header('Refresh:2; URL=index.php');
                             } else {
                                 echo "file is not submitted";
+                                header('Refresh:0;URL =  create.php');
 
                             }
                         } else {
                             echo "File is not uploaded";
+                            header('Refresh:0;URL =  create.php');
                         }
                     } else {
                         echo "Extension does not match";
+                        header('Refresh:0;URL =  create.php');
                     }
                 } else {
                     echo "File size must be lessthen 2MB";
+                    header('Refresh:0;URL =  create.php');
                 }
             } else {
                 echo "All fields are required";
+                header('Refresh:0;URL =  create.php');
             }
         }
 

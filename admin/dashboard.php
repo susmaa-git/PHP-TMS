@@ -13,11 +13,18 @@ require('auth/secure.php');
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/c1653eb0dd.js" crossorigin="anonymous"></script>
     <title>Dashboard</title>
+    <style>
+        .navbar .nav-item  a:hover{
+            background-color: white;
+            border-radius: 20px;
+
+        }
+    </style>
 </head>
 
 <body>
-<div class="container-fluid bg-light">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container-fluid bg-danger">
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger">
             <div class="container">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,44 +39,39 @@ require('auth/secure.php');
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Create
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul class="dropdown-menu bg-info" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="users/create.php">Add User</a></li>
                                 <li><a class="dropdown-item" href="tasks/create.php">Add Task</a></li>
                                 <li><a class="dropdown-item" href="files/create.php">Add File</a></li>
+                                <li><a class="dropdown-item" href="teachers/create.php">Add teachers</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Manage
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul class="dropdown-menu  bg-info"  aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="users/index.php">Manage Users</a></li>
                                 <li><a class="dropdown-item" href="tasks/index.php">Manage Tasks</a></li>
                                 <li><a class="dropdown-item" href="files/index.php">Manage Files</a></li>
+                                <li><a class="dropdown-item" href="teachers/index.php">Manage Teachers</a></li>
                             </ul>
                         </li>
                     </ul>
                     <div class="d-flex">
-                    <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Account
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <p><a class="dropdown-item" href="../auth/logout.php">Logout</a></p>
-                            </div>
-                        </div>
+                    
                         <div class="d-flex">
-                        <div class="nav-item dropdown">
+                        <div class="nav-item dropdown bg-danger">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Account
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <p><a class="dropdown-item" href="../auth/logout.php">Logout</a></p>
+                                <p><a class="dropdown-item" href="auth/logout.php">Logout</a></p>
                             </div>
                         </div>
                         </div>
-                        <a class="btn btn-primary btn-sm " href="../register.php" role="button"> Register</a>
-                        <a class="btn btn-primary btn-sm ms-3" href="../index.php" role="button"> Login</a>
+                        <a class="btn btn-primary btn-sm " href="register.php" role="button"> Register</a>
+                        <a class="btn btn-primary btn-sm ms-3" href="index.php" role="button"> Login</a>
                     </div>
                 </div>
             </div>
@@ -86,7 +88,7 @@ require('auth/secure.php');
     ?>
     <header class="py-5">
         <div class="container">
-            <h3 class="text-danger">This is My Dashboard</h3>
+            <h3 class="text-danger text-center">This is my dashboard of task management system in php</h3>
         </div>
     </header>
 
@@ -95,10 +97,10 @@ require('auth/secure.php');
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap" class="card-img-top" alt="...">
+                        <img src="images/user.png" class="img-responsive" alt="..." >
                         <div class="card-body">
                             <h5 class="card-title">Users</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">One can add and manage users.</p>
                             <a href="users/index.php" class="btn btn-outline-primary" title="View Users"> <i class="fa-solid fa-eye"></i> </a>
                             <a href="users/create.php" class="btn btn-outline-primary" title="Add Users "><i class="fa-solid fa-plus"></i></a>
                         </div>
@@ -106,10 +108,10 @@ require('auth/secure.php');
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap" class="card-img-top" alt="...">
+                        <img src="images/file.jpg"class="card-img-top  img-responsive" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Files</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">One can add and manage files</p>
                             <a href="files/index.php" class="btn btn-outline-primary" title="View File"> <i class="fa-solid fa-eye"></i> </a>
                             <a href="files/create.php" class="btn btn-outline-primary" title="Add File "><i class="fa-solid fa-plus"></i></a>
                         </div>
@@ -117,20 +119,20 @@ require('auth/secure.php');
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap" class="card-img-top" alt="...">
+                        <img src="images/task.png" class="card-img-top  img-responsive" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Tasks</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">One can add and manage tasks.</p>
                             <a href="tasks/index.php" class="btn btn-outline-primary" title="View Task"> <i class="fa-solid fa-eye"></i> </a>
                             <a href="tasks/create.php" class="btn btn-outline-primary" title="Add Task"><i class="fa-solid fa-plus"></i></a>                        </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                     <div class="card" style="width: 18rem;">
-                        <img src="https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap" class="card-img-top" alt="...">
+                        <img src="images/teacher.png"    class="card-img-top  img-responsive" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Teachers</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">One can add and manage teachers.</p>
                             <a href="teachers/index.php" class="btn btn-outline-primary" title="View Teachers"> <i class="fa-solid fa-eye"></i> </a>
                             <a href="teachers/create.php" class="btn btn-outline-primary" title="Add Teachers"><i class="fa-solid fa-plus"></i></a>                        </div>
                     </div>
@@ -140,8 +142,8 @@ require('auth/secure.php');
     </section>
 
 
-    <footer class="bg-light py-5 mt-5">
-        <div class="container bg-light">
+    <footer class="bg-danger py-5 mt-5">
+        <div class="container bg-danger">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                     <p>&copy; 2021 All Rights Reserved</p>

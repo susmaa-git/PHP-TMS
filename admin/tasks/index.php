@@ -4,10 +4,10 @@
 <section class="py-5">
   <div class="container">
     <div class="d-flex justify-content-between">
-    <h4 class="pb-3">Manage User</h4>
-    <p><a href="create.php" role="button" class="btn btn-sm btn-primary">Create User</a></p>
+      <h4 class="pb-3">Manage tasks</h4>
+      <p class=""> <a name="" id="" class="btn btn-primary btn-sm" href="create.php" role="button"><i class="fa-solid fa-plus"></i></a>
+      </p>
     </div>
-  </div>
   <table class="table">
     <thead>
       <tr>
