@@ -7,7 +7,7 @@ if (isset($_POST['login'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    if ($email == "" || $password == "") {
+    if($email == "" || $password == "") {
         header('location:../index.php?required=All Fields are Required');
     } else {
         // fetch the email and password from users table
@@ -31,3 +31,6 @@ if (isset($_POST['login'])) {
         }
     }
 }
+require('connection/config.php');
+
+?>

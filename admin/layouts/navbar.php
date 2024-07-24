@@ -32,7 +32,7 @@
                                 <li><a class="dropdown-item" href="../users/index.php">Manage Users</a></li>
                                 <li><a class="dropdown-item" href="../tasks/index.php">Manage Tasks</a></li>
                                 <li><a class="dropdown-item" href="../files/index.php">Manage Files</a></li>
-                                <li><a class="dropdown-item" href="../teachers/index.php">Manage Files</a></li>
+                                <li><a class="dropdown-item" href="../teachers/index.php">Manage Teacher</a></li>
                             </ul>
                         </li>
                     </ul>
